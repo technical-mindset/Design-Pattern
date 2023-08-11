@@ -18,6 +18,16 @@ public class Main {
         sub.subscribe(new Logger());
         sub.change(27,56,92);
 
+        // _------------------------------_ Decorator Design Pattern
+         Pizza pizza = new ThickCrustPizza();
+        //wrapping the instance
+        pizza = new Olive(new Cheese(new Pepper(pizza)));
+
+        System.out.println(pizza.cost());
+        System.out.println(pizza.getDescription());
+
+
+
     }
     public static void test(Duck duck){
         duck.quack();
