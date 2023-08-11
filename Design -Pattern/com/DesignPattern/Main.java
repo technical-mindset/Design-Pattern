@@ -6,14 +6,15 @@ import com.DesignPattern.Adapter.*;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        Duck duck = new MallardDuck();
         Drone drone = new SuperDrone();
 
         //adapting the adapter
         Duck adapter = new Adapter(drone);
-        adapter.fly();
-        adapter.quack();
-
+        test(adapter);
+    }
+    public static void test(Duck duck){
+        duck.quack();
+        duck.fly();
 
     }
 }
