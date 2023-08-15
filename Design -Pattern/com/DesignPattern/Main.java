@@ -27,6 +27,11 @@ public class Main {
         System.out.println(pizza.getDescription());
 
 
+        // _----------------------------_ Factory Method Design Pattern
+                OS os = OS_Factory.getOS("LINUX");
+                os.getOS();
+
+
 
     }
     public static void test(Duck duck){
